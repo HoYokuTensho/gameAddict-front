@@ -1,0 +1,118 @@
+/*CONTAINER*/
+/*game graphic container*/
+.gameCard {
+    background: #76718b;
+    border-radius: 30px;
+    width: 98%;
+    height: 35%;
+    margin-bottom: 2%;
+    padding: 1%;
+}
+/*game name container*/
+.gameNameContainer {
+  width: 50%;
+  height: 20%;
+  padding-left: 1%;
+}
+/*game description container*/
+.gameDescriptionContainer {
+    background: #E1E4EA;
+    border-radius: 10px;
+    width: 36%;
+    height: 40%;
+    margin-left: 1%;
+    padding: 1%;
+    word-wrap:break-word;
+    float: left;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+/*game tags container*/
+.gameTagsContainer {
+    background: #E1E4EA;
+    border-radius: 10px;
+    width: 36%;
+    height: 40%;
+    margin-left: 5%;
+    padding: 1%;
+    word-wrap:break-word;
+    float: left;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+/*game garde container*/
+.gameGradeContainer {
+    background: #E1E4EA;
+    border-radius: 10px;
+    width: 10%;
+    height: 40%;
+    margin-left: 5%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+/*game date container*/
+.gameDateContainer {
+  background: #404C69;
+  border-radius: 10px;
+  width: 16%;
+  height: 3%;
+  margin-top: 0.5%;
+  margin-left: 1%;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+/*game players container*/
+.gamePlayerContainer {
+  background: #404C69;
+  border-radius: 10px;
+  width: 16%;
+  height: 3%;
+  margin-top: 0.5%;
+  margin-left: 2%;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+/*game tag graphic container*/
+.gameTag {
+  height: 10%;
+  width: auto;
+  border-radius: 10px;
+  padding: 1.5%;
+  margin-left: 2%;
+  background: #404C69;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+/*ELEMENTS*/
+/*game name*/
+.gameName {
+  color: #E1E4EA;
+  font-size: 2em;
+  font-family: fantasy;
+}
+/*game description*/
+.gameDescription {
+    color: #404C69;
+}
+/*game grade*/
+.gameGrade {
+  color: #404C69;
+  font-size: 3em;
+  font-style: italic;
+  font-family: fantasy;
+}
+/**/
+.gameTagName {
+  font-weight: bold;
+}

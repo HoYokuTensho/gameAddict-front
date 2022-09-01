@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+/*all element*/
 * {
   padding: 0;
   margin: 0;
@@ -6,6 +7,17 @@
   font-size: 1em;
   font-family: monospace;
 }
+/*page body*/
 body {
   background: #E1E4EA;
+}
+/*component container*/
+.container {
+  position: absolute;
+  top: 18%;
+  left: 5%;
+  width: 90%;
+  height: 65%;
+  overflow: scroll;
+  overflow-x: hidden;
 }
