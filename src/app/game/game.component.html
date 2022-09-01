@@ -1,28 +1,28 @@
 <div class="gameCard">
   <div class="gameNameContainer">
-    <span class="gameName">XXXXXX</span>
+    <span class="gameName">{{gameDto.name}}</span>
   </div>
 
   <div class="gameDescriptionContainer">
-    <span class="gameDescription">XXXXXX</span>
+    <span class="gameDescription">{{gameDto.description}}</span>
   </div>
 
   <div class="gameTagsContainer">
-    <div class="gameTag" *ngFor="let n of [1,2,3,4];">
-      <span class="gameTagName">XXXXXX</span>
+    <div class="gameTag" *ngFor="let tag of gameDto.tags">
+      <span class="gameTagName">{{tag.name}}</span>
     </div>
   </div>
 
   <div class="gameGradeContainer">
-    <span class="gameGrade">XX / 20</span>
+    <span class="gameGrade">{{gameDto.grade}}/ 20</span>
   </div>
 
   <div class="gameDateContainer">
-    <span class="gameDate">Released : XX/XX/XXXX </span>
+    <span class="gameDate">Released : {{gameDto.date}}</span>
   </div>
 
   <div class="gamePlayerContainer">
-    <span class="gamePlayer">Players : XXXXXX </span>
+    <span class="gamePlayer">Players : {{gameDto.player}}</span>
   </div>
 
 </div>
