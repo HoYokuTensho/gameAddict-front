@@ -1,0 +1,88 @@
+/*CONTAINERS*/
+/*header graphic container*/
+.header {
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  top: 0;
+  background: #404C69;
+}
+/*title container*/
+.titleContainer {
+  height: 100%;
+  width: 75%;
+  padding-left: 5%;
+  display: flex;
+  align-items: center;
+  float: left;
+}
+/*title image container*/
+.titleImageContainer {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+/*menu graphic container*/
+.menuContainer {
+    position: absolute;
+    height: 5%;
+    width: 100%;
+    top: 10%;
+    background: #76718b;
+    display: flex;
+    align-items: center;
+}
+/*footer graphic container*/
+.footer {
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  bottom: 0;
+  border-top: solid 25px #76718b;
+  background: #404C69;
+}
+/*author text container*/
+.authorContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*ELEMENTS*/
+/*title*/
+.title {
+  color: #E1E4EA;
+  font-size: 3em;
+  font-family: fantasy;
+}
+/*title image*/
+.titleImage {
+  height: 90%;
+  background: #E1E4EA;
+  border-radius: 200px;
+  border: solid 3px #76718b;
+}
+/*menu text*/
+.menu {
+  font-size: 2em;
+  width: 17%;
+  text-align: center;
+}
+.menu:hover {
+  cursor: pointer;
+  color: #404C69;
+}
+/*menu separator*/
+.separator {
+  font-size: 2em;
+}
+/*author text*/
+.author {
+  color: #E1E4EA;
+  font-size: 2em;
+  font-family: monospace;
+}
