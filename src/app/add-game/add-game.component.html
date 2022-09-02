@@ -2,12 +2,12 @@
   <div class="addCard">
     <div class="gameNameContainer">
       <label class="inputLabel"> Game name :</label>
-      <input class="gameName">
+      <input type="text"class="gameName">
     </div>
 
     <div class="gameDateContainer">
       <label class="inputLabel"> Release date:</label>
-      <input type="date" value="2000-01-01" class="gameDate">
+      <input  type="date" value="2000-01-01" class="gameDate">
     </div>
 
     <div class="gamePlayerContainer">
@@ -18,15 +18,15 @@
     <div class="gameDescriptionContainer">
       <label class="inputLabel"> Game description:</label>
       <br>
-      <textarea  class="gameDescription"></textarea>
+      <textarea class="gameDescription"></textarea>
     </div>
 
     <div class="gameTagsContainer">
       <label class="inputLabel"> Game tags:</label>
       <br>
-      <div class="gameTag" *ngFor="let n of [1,2,3,4];">
-        <input class="tagName" type="checkbox" value="XXXXXX">
-        <label class="tagLabel"> XXXXXX </label><br>
+      <div class="gameTag" *ngFor="let tagDto of tagsDto">
+        <input class="tagName" type="checkbox" value="{{tagDto.name}}">
+        <label class="tagLabel"> {{tagDto.name}} </label><br>
       </div>
     </div>
   </div>
