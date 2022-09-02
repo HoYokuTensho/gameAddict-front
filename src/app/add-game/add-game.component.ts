@@ -1,5 +1,7 @@
+import {FormBuilder,FormGroup,FormArray,FormControl} from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { TagDto } from '../dto/tagDto';
+import { GameDto } from '../dto/gameDto';
 
 @Component({
   selector: 'app-add-game',
@@ -8,12 +10,52 @@ import { TagDto } from '../dto/tagDto';
 })
 export class AddGameComponent implements OnInit {
 
-  //List of all game tag
-  tagsDto : TagDto[] = [];
+  //game form value
+  name = new FormControl();
+  date = new FormControl();
+  player = new FormControl();
+  description = new FormControl();
+  tags = new FormControl();
 
-   constructor() { }
+  //tag list use to create tags in form
+  tagList: TagDto[] = [];
+
+  //List of all game tag
+  tagsDto : TagDto[] = []
+
+  //new game to add
+  gameObject : any;
+
+  constructor() { }
 
   ngOnInit(): void {
   }
 
+  //detect tag add or remove from tag check box
+  changeTag(tag: TagDto): void {
+    if (this.tagList.includes(tag)) {
+      const index = this.tagsDto.indexOf(tag, 0);
+      if (index > -1) {
+         this.tagList.splice(index, 1);
+      }
+    } else {
+      this.tagList.push(tag);
+    }
+    this.tags = new FormControl(this.tagList);
+  }
+
+  //implements game object from form data
+  submitGame(): void {
+      this.gameObject = new  GameDto(
+      -1,
+      this.name.value,
+      this.description.value,
+      this.date.value,
+      this.player.value,
+      0,
+      this.tags.value,
+    );
+
+    console.log(this.gameObject);
+  }
 }
