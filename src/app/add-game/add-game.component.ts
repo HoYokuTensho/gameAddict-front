@@ -2,6 +2,16 @@ import {FormBuilder,FormGroup,FormArray,FormControl} from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { TagDto } from '../dto/tagDto';
 import { GameDto } from '../dto/gameDto';
+import {HttpClient} from '@angular/common/http';
+
+export interface GameDtoInt {
+   id: number ;
+   name: string;
+   description: string;
+   date: string;
+   player : number;
+   grade: number;
+}
 
 @Component({
   selector: 'app-add-game',
@@ -26,9 +36,15 @@ export class AddGameComponent implements OnInit {
   //new game to add
   gameObject : any;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.http.get("http://localhost:8082/gameaddict/api/v1/tags/tags").subscribe( data => {
+      const json = JSON.parse(JSON.stringify(data));
+      json.forEach(element => this.tagsDto.push(new TagDto(element.id, element.name)));
+    });
+
+
   }
 
   //detect tag add or remove from tag check box
@@ -46,7 +62,7 @@ export class AddGameComponent implements OnInit {
 
   //implements game object from form data
   submitGame(): void {
-      this.gameObject = new  GameDto(
+      this.gameObject = new GameDto(
       -1,
       this.name.value,
       this.description.value,
@@ -55,7 +71,9 @@ export class AddGameComponent implements OnInit {
       0,
       this.tags.value,
     );
+    console.log(JSON.stringify(this.gameObject))
 
-    console.log(this.gameObject);
+    this.http.post("http://localhost:8082/gameaddict/api/v1/jeux/jeu", this.gameObject).subscribe(data => {
+    console.log(data)});
   }
 }
